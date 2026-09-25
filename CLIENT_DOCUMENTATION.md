@@ -13,7 +13,7 @@ Each template in this suite has been built according to your confirmed direction
 | [`index.html`](file:///d:/Projects%20Company/smart-appliances-templates/index.html) | **Base Template** | Post-Service Follow-up & Quick Check-In | `Schedule Appointment →` |
 | [`template-2-maintenance.html`](file:///d:/Projects%20Company/smart-appliances-templates/template-2-maintenance.html) | **Template 2 – V1** | Annual Tune-Up & Seasonal Savings | `Claim Your Savings ($89 Diagnostic Credit)` |
 | [`template-3-review-request.html`](file:///d:/Projects%20Company/smart-appliances-templates/template-3-review-request.html) | **Template 3 – V2** | Same-Day Service Dispatch & Urgent Openings | `Claim Your Slot Online ($25 OFF Code: FAST25)` |
-| [`template-4-warranty.html`](file:///d:/Projects%20Company/smart-appliances-templates/template-4-warranty.html) | **Template 4 – V2 (Clean & Focused)** | Targeted Appliance Specialist & Symptom Care | `Book [Appliance] Repair ($30 OFF Code: CARE30)` |
+| [`template-4-warranty.html`](file:///d:/Projects%20Company/smart-appliances-templates/template-4-warranty.html) | **Template 4 – V2 (Clean & Focused)** | Targeted Appliance Specialist & Option Care | `Option CTAs ($30 OFF Code: FLEX30)` |
 
 ---
 
