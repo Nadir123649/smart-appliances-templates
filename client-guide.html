@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Appliance Services — Client Email Suite Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #123A64;
+      --accent: #F5A623;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text-dark: #0F172A;
+      --text-body: #334155;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --code-bg: #1E293B;
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text-body);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrapper {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(18, 58, 100, 0.06);
+      padding: 48px;
+    }
+
+    /* Header Styling */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .brand-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0 0 6px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .pill-badge {
+      display: inline-block;
+      background: #EBF4FC;
+      color: var(--primary);
+      border: 1px solid #D4E5F5;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    /* Typography */
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 44px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    p { margin-top: 0; margin-bottom: 16px; }
+
+    /* Highlights & Callouts */
+    .callout {
+      background: #F0F7FF;
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+
+    .callout-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tip-box {
+      background: #FEF9EE;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+
+    .tip-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #9A6509;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Tables */
+    .custom-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .custom-table th {
+      background: #F8FAFC;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .custom-table td {
+      padding: 14px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+      background: #FFFFFF;
+    }
+
+    .custom-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Code Snippets */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      background: #F1F5F9;
+      color: #0F172A;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    pre {
+      background: var(--code-bg);
+      color: #F8FAFC;
+      padding: 20px;
+      border-radius: 12px;
+      overflow-x: auto;
+      margin: 16px 0 24px 0;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    pre code {
+      background: transparent;
+      color: #E2E8F0;
+      padding: 0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* Step Numbers */
+    .step-card {
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .step-number {
+      background: var(--primary);
+      color: #FFFFFF;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+      
+      <!-- Top Header -->
+      <div class="header">
+        <div>
+          <span class="pill-badge">Production Deliverable Guide</span>
+          <h1 class="brand-title">Smart Appliance Services</h1>
+          <p class="subtitle">Complete HTML Email Suite & Maintenance Documentation</p>
+        </div>
+        <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790145483/23634436.png" width="136" alt="Smart Appliance Services Logo" />
+      </div>
+
+      <!-- Quick Intro -->
+      <p>This user-friendly guide explains how your 4 production-ready email templates are structured, how non-technical team members can easily update text, offers, links, and photos, and how to upload the code into Mailchimp, Klaviyo, HubSpot, or SendGrid.</p>
+
+      <div class="callout">
+        <div class="callout-title">💡 100% Pure HTML Text Guarantee</div>
+        <p style="margin: 0; font-size: 14px; color: #1E293B;">
+          Every headline, paragraph, discount offer, price, promo code, phone number, and button label in all 4 templates is <strong>pure HTML text</strong> (never baked into images). You can edit them freely in any text editor or ESP visual builder.
+        </p>
+      </div>
+
+      <!-- Template Map Table -->
+      <h2>📦 1. Confirmed Template Suite Overview</h2>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Template File</th>
+            <th>Approved Direction</th>
+            <th>Primary Campaign Use</th>
+            <th>Primary CTA & Offer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>index.html</code></td>
+            <td><strong>Base Template</strong></td>
+            <td>Post-Service Customer Check-In</td>
+            <td><code>Schedule Appointment →</code></td>
+          </tr>
+          <tr>
+            <td><code>template-2-maintenance.html</code></td>
+            <td><strong>Template 2 – V1</strong></td>
+            <td>Seasonal Tune-Up & Special Savings</td>
+            <td><code>Claim Your Savings ($89 Credit)</code></td>
+          </tr>
+          <tr>
+            <td><code>template-3-review-request.html</code></td>
+            <td><strong>Template 3 – V2</strong></td>
+            <td>Same-Day Dispatch & Openings Alert</td>
+            <td><code>Claim Slot ($25 OFF Code: FAST25)</code></td>
+          </tr>
+          <tr>
+            <td><code>template-4-warranty.html</code></td>
+            <td><strong>Template 4 – V2 (Clean)</strong></td>
+            <td>Targeted Specialist & Symptom Care</td>
+            <td><code>Book Repair ($30 OFF Code: CARE30)</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Easy Editing Guide -->
+      <h2>✍️ 2. Easy Content Editing Guide (No Coding Required)</h2>
+
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Editing Headlines & Subheadings</h3>
+        </div>
+        <p>Headlines are enclosed inside <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, or <code>&lt;h3&gt;</code> tags. Simply replace the text between the tags:</p>
+        <pre><code>&lt;!-- Example Headline in index.html --&gt;
+&lt;h1 style="margin: 0; font-family: 'Afacad', sans-serif; font-size: 26px; color: #123A64;"&gt;
+  How is your [appliance] doing, [first_name]?
+&lt;/h1&gt;</code></pre>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Editing Body Paragraphs</h3>
+        </div>
+        <p>Paragraph text is enclosed inside <code>&lt;p&gt;</code> tags. You can modify any sentence directly:</p>
+        <pre><code>&lt;!-- Example Body Copy in template-3-review-request.html --&gt;
+&lt;p style="margin: 0 0 14px 0; font-family: 'Manrope', sans-serif; font-size: 14px; color: #3A4B5B;"&gt;
+  Need your refrigerator, washer, dryer, or oven repaired fast? Our certified local technicians are in &lt;strong&gt;[City]&lt;/strong&gt; today.
+&lt;/p&gt;</code></pre>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Updating CTA Button Text & Booking Links</h3>
+        </div>
+        <p>To change a button's destination URL, change <code>href="..."</code>. To change the button text, edit the text inside the <code>&lt;a&gt;</code> tag:</p>
+        <pre><code>&lt;!-- Example Button Link --&gt;
+&lt;a href="https://smartapplianceservices.com/booking" target="_blank" style="..."&gt;
+  SCHEDULE YOUR REPAIR &amp;rarr;
+&lt;/a&gt;</code></pre>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Updating Phone Numbers & Click-to-Call Links</h3>
+        </div>
+        <p>Search for <code>tel:7272757555</code> across any file. Update both the link and the visible phone string:</p>
+        <pre><code>&lt;!-- Example Click-to-Call Link --&gt;
+Prefer to call? &lt;a href="tel:7272757555" style="..."&gt; (727) 275-7555 &lt;/a&gt;</code></pre>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <h3 class="step-title">Modifying Promo Codes & Discount Offers</h3>
+        </div>
+        <p>Prices and codes are pure text. Search for the codes directly in your editor:</p>
+        <ul>
+          <li><strong>Template 2 ($89 Credit)</strong>: Search for <code>$89</code> or <code>CLAIM YOUR SAVINGS</code>.</li>
+          <li><strong>Template 3 ($25 OFF / FAST25)</strong>: Search for <code>FAST25</code> or <code>$25 OFF</code>.</li>
+          <li><strong>Template 4 ($30 OFF / CARE30)</strong>: Search for <code>CARE30</code> or <code>$30 OFF</code>.</li>
+        </ul>
+        <pre><code>&lt;!-- Example Promo Code Text in Template 3 --&gt;
+Mention code &lt;strong style="color: #123A64;"&gt;FAST25&lt;/strong&gt; when booking online or by phone.</code></pre>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <h3 class="step-title">Swapping Placeholder Images with Real Photos</h3>
+        </div>
+        <p>All logos and icons are hosted on Cloudinary CDN. When ready to replace placeholder graphics with real business photos (technicians, vans, repair scenes):</p>
+        <pre><code>&lt;!-- Replace the src="..." link with your photo URL --&gt;
+&lt;img src="https://your-domain.com/your-technician-photo.jpg" width="140" alt="Technician" style="..." /&gt;</code></pre>
+      </div>
+
+      <!-- CRM Variables Table -->
+      <h2>🔄 3. Dynamic Personalization Placeholders</h2>
+      <p>The templates use standard brackets <code>[...]</code> for personalization placeholders. Replace these with your ESP merge tags when launching campaigns:</p>
+
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Placeholder</th>
+            <th>Description</th>
+            <th>Mailchimp Merge Tag</th>
+            <th>Klaviyo Merge Tag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>[first_name]</code></td>
+            <td>Customer's first name</td>
+            <td><code>*|FNAME|*</code></td>
+            <td><code>{{ first_name|default:'there' }}</code></td>
+          </tr>
+          <tr>
+            <td><code>[appliance]</code></td>
+            <td>Serviced appliance name</td>
+            <td><code>*|APPLIANCE|*</code></td>
+            <td><code>{{ event.Appliance|default:'appliance' }}</code></td>
+          </tr>
+          <tr>
+            <td><code>[City]</code> / <code>[city]</code></td>
+            <td>Customer's local city</td>
+            <td><code>*|CITY|*</code></td>
+            <td><code>{{ person.city|default:'your area' }}</code></td>
+          </tr>
+          <tr>
+            <td><code>[City/Month]</code></td>
+            <td>Location &amp; service month</td>
+            <td><code>*|CITY_MONTH|*</code></td>
+            <td><code>{{ event.CityMonth }}</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ESP Deployment Guide -->
+      <h2>📥 4. ESP / CRM Deployment Instructions</h2>
+      <div class="tip-box">
+        <div class="tip-title">⚡ 3-Step ESP Upload Guide</div>
+        <ol style="margin: 8px 0 0 0; padding-left: 20px; font-size: 14px; color: #451A03;">
+          <li>Open the target template file (e.g. <code>index.html</code>) in any text editor and copy all the code.</li>
+          <li>In Mailchimp, Klaviyo, HubSpot, or SendGrid, create a new email draft and select <strong>Code Your Own / Custom HTML</strong>.</li>
+          <li>Paste the HTML code and save. You can now preview and send!</li>
+        </ol>
+      </div>
+
+      <!-- Footer Note -->
+      <div class="footer">
+        Crafted with ❤️ for <strong>Smart Appliance Services</strong>. Production-Ready HTML Email Suite.
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
