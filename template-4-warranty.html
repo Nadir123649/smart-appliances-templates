@@ -7,8 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-apple-disable-message-reformatting" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <title>Smart Appliance Services - Targeted Appliance Care</title>
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+    <title>Custom Care for Your [Appliance_Type] - Smart Appliance Services</title>
     <!--[if mso]>
   <noscript>
     <xml>
@@ -18,18 +19,19 @@
     </xml>
   </noscript>
   <![endif]-->
-    <!-- Brand Typography: Afacad & Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Afacad:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <style type="text/css">
-        /* Global Resets */
         body,
         table,
         td,
-        a {
+        p,
+        a,
+        li,
+        blockquote {
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
@@ -43,23 +45,47 @@
         img {
             -ms-interpolation-mode: bicubic;
             border: 0;
+            height: auto;
+            line-height: 100%;
             outline: none;
             text-decoration: none;
-            display: block;
         }
 
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0 !important;
+            padding: 0 !important;
             width: 100% !important;
-            min-width: 100%;
             background-color: #EEF1F4;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
-        /* Mobile Media Query */
-        @media only screen and (max-width: 599px) {
+        .mobile-only {
+            display: none !important;
+            max-height: 0px !important;
+            overflow: hidden !important;
+            mso-hide: all !important;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .desktop-only {
+                display: none !important;
+            }
+
+            .mobile-only {
+                display: table !important;
+                max-height: none !important;
+                overflow: visible !important;
+                width: 100% !important;
+            }
+
+            .hide-mobile {
+                display: none !important;
+            }
+
+            .email-wrapper {
+                padding: 0 !important;
+            }
+
             .email-container {
                 width: 100% !important;
                 max-width: 100% !important;
@@ -71,8 +97,80 @@
                 padding-right: 20px !important;
             }
 
-            .mobile-card-padding {
-                padding: 20px 16px !important;
+            .mobile-headline {
+                font-size: 26px !important;
+                line-height: 31px !important;
+            }
+
+            .mobile-btn {
+                width: 100% !important;
+                display: block !important;
+                text-align: center !important;
+                box-sizing: border-box !important;
+            }
+
+            .mobile-stack {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                float: left !important;
+                clear: both !important;
+                box-sizing: border-box !important;
+                text-align: left !important;
+            }
+
+            .mobile-hotline-wrap {
+                white-space: normal !important;
+                text-align: center !important;
+            }
+
+            /* Mobile-Only Footer Compact & Consistency Refinements */
+            .mobile-footer-padding {
+                padding: 14px 18px 12px 18px !important;
+            }
+
+            .mobile-footer-col-left {
+                width: 38% !important;
+            }
+
+            .mobile-footer-col-right {
+                width: 62% !important;
+            }
+
+            .mobile-footer-logo {
+                width: 90px !important;
+                height: auto !important;
+                margin-bottom: 3px !important;
+            }
+
+            .mobile-footer-url {
+                font-size: 9.5px !important;
+                line-height: 13px !important;
+            }
+
+            .mobile-footer-contact {
+                font-size: 9.5px !important;
+                line-height: 14px !important;
+            }
+
+            .mobile-footer-hours {
+                font-size: 8.5px !important;
+                line-height: 13px !important;
+                white-space: nowrap !important;
+            }
+
+            .mobile-footer-divider {
+                margin-top: 8px !important;
+                margin-bottom: 6px !important;
+            }
+
+            .mobile-footer-legal {
+                font-size: 9px !important;
+                line-height: 13px !important;
+            }
+
+            .mobile-footer-legal-pad {
+                padding-top: 3px !important;
             }
 
             .stack-column {
@@ -81,392 +179,354 @@
                 max-width: 100% !important;
             }
 
-            .mobile-column-stack {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                box-sizing: border-box !important;
-                margin-bottom: 12px !important;
-            }
-
-            .mobile-col-space {
-                display: none !important;
-                width: 0 !important;
-                height: 0 !important;
-            }
-
             .mobile-text-left {
                 text-align: left !important;
-            }
-
-            .mobile-text-center {
-                text-align: center !important;
-            }
-
-            .mobile-pad-top {
-                padding-top: 12px !important;
-            }
-
-            .hide-mobile {
-                display: none !important;
-            }
-
-            .mobile-btn {
-                width: 100% !important;
-                display: block !important;
-                text-align: center !important;
-            }
-
-            .segmented-headline {
-                font-size: 28px !important;
-                line-height: 33px !important;
-            }
-
-            /* Mobile-Only Footer Compact & Consistency Refinements */
-            .mobile-footer-padding {
-                padding: 20px 20px 18px 20px !important;
-                text-align: center !important;
-            }
-
-            .mobile-footer-col {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                text-align: center !important;
-            }
-
-            .mobile-footer-logo-wrap {
-                display: block !important;
-                margin: 0 auto 6px auto !important;
-                text-align: center !important;
-            }
-
-            .mobile-footer-logo {
-                display: inline-block !important;
-                width: 125px !important;
-                height: auto !important;
-                margin: 0 auto 5px auto !important;
-            }
-
-            .mobile-footer-url {
-                font-size: 11.5px !important;
-                line-height: 16px !important;
-                text-align: center !important;
-                margin-bottom: 12px !important;
-            }
-
-            .mobile-footer-phone {
-                font-size: 14px !important;
-                line-height: 18px !important;
-                font-weight: 700 !important;
-                color: #FFFFFF !important;
-                text-align: center !important;
-            }
-
-            .mobile-footer-contact {
-                font-size: 11px !important;
-                line-height: 16px !important;
-                text-align: center !important;
-            }
-
-            .mobile-footer-hours {
-                font-size: 10.5px !important;
-                line-height: 15px !important;
-                text-align: center !important;
-            }
-
-            .mobile-footer-divider {
-                margin-top: 12px !important;
-                margin-bottom: 10px !important;
-            }
-
-            .mobile-footer-legal {
-                font-size: 10px !important;
-                line-height: 14px !important;
-                text-align: center !important;
             }
         }
     </style>
 </head>
 
-<body style="margin: 0; padding: 0; background-color: #EEF1F4;">
-
-    <!-- Hidden Preheader Text for Inbox Snippet Preview -->
-    <div style="display: none; max-height: 0px; overflow: hidden; font-size: 1px; line-height: 1px; color: #EEF1F4; opacity: 0; mso-hide: all;">
-        Targeted Appliance Specialist: Expert service for your [appliance] in [City]. Take $30 OFF with promo code CARE30.
-    </div>
-    <div style="display: none; max-height: 0px; overflow: hidden; font-size: 1px; line-height: 1px; color: #EEF1F4; opacity: 0; mso-hide: all;">
-        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
-    </div>
+<body
+    style="margin: 0; padding: 0; background-color: #EEF1F4; font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; color: #1E293B;">
 
     <!-- Outer wrapper table -->
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="email-wrapper"
         style="background-color: #EEF1F4; table-layout: fixed;">
         <tr>
             <td align="center" style="padding: 24px 0;">
 
+                <!-- Email Container (600px Modular) -->
                 <!--[if (gte mso 9)|(IE)]>
-        <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+        <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
         <tr>
         <td align="center" valign="top" width="600">
         <![endif]-->
-
-                <!-- Main 600px Email Container -->
                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
                     class="email-container"
-                    style="max-width: 600px; margin: 0 auto; background-color: #FFFFFF; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); overflow: hidden; border: 1px solid #E2E8F0;">
+                    style="max-width: 600px; margin: 0 auto; background-color: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); border: 1px solid #E2E8F0; table-layout: fixed;">
 
-                    <!-- ==================== 1. HEADER (LOGO + CITY TAG) ==================== -->
+                    <!-- Top Brand Header Bar (Enhanced Alignment & Styling) -->
                     <tr>
-                        <td style="background-color: #FFFFFF; padding: 24px 36px 18px 36px;" class="mobile-padding">
+                        <td style="background-color: #FFFFFF; padding: 18px 32px 12px 32px; border-bottom: 1px solid #F1F5F9;"
+                            class="mobile-padding">
                             <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
-                                    <!-- Left: Logo -->
                                     <td align="left" valign="middle">
-                                        <a href="https://smartapplianceservices.com/" target="_blank"
+                                        <a href="https://services-template-1w9w.vercel.app/template4-v3" target="_blank"
                                             style="text-decoration: none; display: inline-block;">
                                             <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790145483/23634436.png"
                                                 width="124" height="37" alt="Smart Appliance Services"
                                                 style="display: block; width: 124px; height: auto; border: 0;" />
                                         </a>
                                     </td>
-
-                                    <!-- Right: Dynamic Segment Location Tag -->
                                     <td align="right" valign="middle">
-                                        <span
-                                            style="font-family: 'Afacad', Arial, sans-serif; font-size: 12.5px; line-height: 16px; font-weight: 700; color: #123A64; text-transform: uppercase; letter-spacing: 0.5px;">
-                                            Serving <span style="color: #F5A623;">[City, FL]</span>
-                                        </span>
+                                        <a href="tel:7272757555"
+                                            style="display: inline-block; background-color: #F8FAFC; border: 1.5px solid #CBD5E1; color: #123A64; font-family: 'Afacad', sans-serif; font-size: 15px; font-weight: 800; padding: 7px 16px; border-radius: 20px; text-decoration: none; white-space: nowrap;">
+                                            <span
+                                                style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                                                <img src="assets/icons/icon_phone_blue.png" width="14" height="14"
+                                                    alt="Phone"
+                                                    style="display: inline-block; vertical-align: 1px; width: 14px; height: 14px; border: 0;" />
+                                            </span>
+                                            (727) 275-7555
+                                        </a>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
 
-                    <!-- Subtle divider line -->
+                    <!-- Dynamic Personalized Headline Section -->
                     <tr>
-                        <td style="padding: 0 36px;" class="mobile-padding">
-                            <div style="border-bottom: 1px solid #F1F5F9; font-size: 1px; line-height: 1px;">&nbsp;
-                            </div>
-                        </td>
-                    </tr>
-
-                    <!-- ==================== 2. MODULAR TARGETED HERO ==================== -->
-                    <tr>
-                        <td bgcolor="#FFFFFF" style="background-color: #FFFFFF; padding: 24px 36px 20px 36px;"
-                            class="mobile-padding">
-
-                            <!-- Yellow Accent Bar + Dynamic Appliance Headline -->
-                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                style="margin-bottom: 16px;">
+                        <td style="padding: 20px 32px 16px 32px; background-color: #FFFFFF;" class="mobile-padding">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
-                                    <td width="4" bgcolor="#F5A623"
-                                        style="width: 4px; background-color: #F5A623; border-radius: 999px; font-size: 1px; line-height: 1px;">
-                                        &nbsp;</td>
-                                    <td style="padding-left: 14px;" align="left">
-                                        <span
-                                            style="font-family: 'Afacad', Arial, sans-serif; font-size: 13px; line-height: 16px; font-weight: 700; color: #F5A623; text-transform: uppercase; letter-spacing: 0.6px; display: block; margin-bottom: 4px;">
-                                            [Appliance_Type] Specialist &middot; Local Care
-                                        </span>
-                                        <h1 class="segmented-headline"
-                                            style="margin: 0; font-family: 'Afacad', Arial, sans-serif; font-size: 32px; line-height: 36px; font-weight: 700; color: #123A64; letter-spacing: -0.2px;">
-                                            Expert service for your [Refrigerator].
-                                        </h1>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- Targeted intro copy -->
-                            <p
-                                style="margin: 0 0 12px 0; font-family: 'Manrope', Arial, sans-serif; font-size: 14px; line-height: 22px; font-weight: 400; color: #3A4B5B;">
-                                Is your <strong style="color: #123A64;">[refrigerator]</strong> struggling to maintain
-                                temperature, making strange sounds, or leaking? Don't wait for a small glitch to turn
-                                into a full breakdown.
-                            </p>
-                            <p
-                                style="margin: 0 0 20px 0; font-family: 'Manrope', Arial, sans-serif; font-size: 14px; line-height: 22px; font-weight: 400; color: #3A4B5B;">
-                                Our factory-certified technicians in <strong style="color: #123A64;">[City]</strong> are
-                                equipped with OEM parts and specialized diagnostic equipment to get it back up and
-                                running fast.
-                            </p>
-
-                            <!-- ==================== 3. MODULAR SYMPTOM CHECK CARDS (3 BOXES) ==================== -->
-                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                style="margin-bottom: 22px;">
-                                <tr>
-                                    <!-- Card 1: Diagnostic / Cooling -->
-                                    <td valign="top" class="mobile-column-stack" align="center" width="168"
-                                        style="width: 168px; background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 9px; padding: 18px 12px 16px 12px; text-align: center;">
+                                    <td>
+                                        <!-- Executive Local Specialist Dispatch Banner (Desktop: 1 Line) -->
                                         <table role="presentation" border="0" cellpadding="0" cellspacing="0"
-                                            align="center" style="margin: 0 auto 8px auto;">
+                                            width="100%" class="desktop-only"
+                                            style="background: linear-gradient(135deg, #0D233A 0%, #163E66 100%); background-color: #0D233A; border: 1.5px solid rgba(245, 166, 35, 0.45); border-radius: 10px; margin-bottom: 18px; box-shadow: 0 4px 14px rgba(13, 35, 58, 0.15);">
                                             <tr>
-                                                <td align="center">
-                                                    <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790166450/crushsvg-1790166391508.png"
-                                                        width="28" height="28" alt="Diagnostic"
-                                                        style="display: block; width: 28px; height: 28px; border: 0;" />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <h3
-                                            style="margin: 0 0 4px 0; font-family: 'Afacad', Arial, sans-serif; font-size: 13.5px; line-height: 17px; font-weight: 700; color: #123A64; text-transform: uppercase;">
-                                            Temperature Issues
-                                        </h3>
-                                        <p
-                                            style="margin: 0; font-family: 'Manrope', Arial, sans-serif; font-size: 11.5px; line-height: 15px; color: #64748B;">
-                                            Warm interior, spoiled food, or frozen coils.
-                                        </p>
-                                    </td>
-
-                                    <!-- Space 1 -->
-                                    <td width="12" class="mobile-col-space"
-                                        style="width: 12px; font-size: 1px; line-height: 1px;">&nbsp;</td>
-
-                                    <!-- Card 2: Noises & Vibration -->
-                                    <td valign="top" class="mobile-column-stack" align="center" width="168"
-                                        style="width: 168px; background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 9px; padding: 18px 12px 16px 12px; text-align: center;">
-                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
-                                            align="center" style="margin: 0 auto 8px auto;">
-                                            <tr>
-                                                <td align="center">
-                                                    <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790166454/crushsvg-1790166414180.png"
-                                                        width="28" height="28" alt="Noises"
-                                                        style="display: block; width: 28px; height: 28px; border: 0;" />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <h3
-                                            style="margin: 0 0 4px 0; font-family: 'Afacad', Arial, sans-serif; font-size: 13.5px; line-height: 17px; font-weight: 700; color: #123A64; text-transform: uppercase;">
-                                            Unusual Noises
-                                        </h3>
-                                        <p
-                                            style="margin: 0; font-family: 'Manrope', Arial, sans-serif; font-size: 11.5px; line-height: 15px; color: #64748B;">
-                                            Loud buzzing, clicking, or motor vibration.
-                                        </p>
-                                    </td>
-
-                                    <!-- Space 2 -->
-                                    <td width="12" class="mobile-col-space"
-                                        style="width: 12px; font-size: 1px; line-height: 1px;">&nbsp;</td>
-
-                                    <!-- Card 3: Leaks & Drainage -->
-                                    <td valign="top" class="mobile-column-stack" align="center" width="168"
-                                        style="width: 168px; background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 9px; padding: 18px 12px 16px 12px; text-align: center;">
-                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
-                                            align="center" style="margin: 0 auto 8px auto;">
-                                            <tr>
-                                                <td align="center">
-                                                    <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790166458/crushsvg-1790166425413.png"
-                                                        width="28" height="28" alt="Leaks"
-                                                        style="display: block; width: 28px; height: 28px; border: 0;" />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <h3
-                                            style="margin: 0 0 4px 0; font-family: 'Afacad', Arial, sans-serif; font-size: 13.5px; line-height: 17px; font-weight: 700; color: #123A64; text-transform: uppercase;">
-                                            Leaks &amp; Water
-                                        </h3>
-                                        <p
-                                            style="margin: 0; font-family: 'Manrope', Arial, sans-serif; font-size: 11.5px; line-height: 15px; color: #64748B;">
-                                            Puddles underneath or faulty ice dispensers.
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <!-- ==================== 4. EXCLUSIVE TARGETED OFFER BLOCK (CLEAN & FOCUSED) ==================== -->
-                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                style="background-color: #123A64; background: linear-gradient(145deg, #0F2D4E 0%, #15416F 100%); border-radius: 12px; border-collapse: separate !important; margin-bottom: 20px;">
-                                <tr>
-                                    <td style="padding: 24px 28px;" class="mobile-card-padding">
-                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
-                                            width="100%">
-                                            <tr>
-                                                <td align="left">
-                                                    <span
-                                                        style="font-family: 'Afacad', Arial, sans-serif; font-size: 12px; line-height: 15px; font-weight: 700; color: #F5A623; text-transform: uppercase; letter-spacing: 0.6px; display: block; margin-bottom: 4px;">
-                                                        Special Promotion &middot; [City] Homeowners
-                                                    </span>
-                                                    <h2
-                                                        style="margin: 0 0 6px 0; font-family: 'Afacad', Arial, sans-serif; font-size: 26px; line-height: 30px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.2px;">
-                                                        $30 OFF Any [Appliance] Repair
-                                                    </h2>
-                                                    <p
-                                                        style="margin: 0 0 18px 0; font-family: 'Manrope', Arial, sans-serif; font-size: 13px; line-height: 19px; color: #C9D6E6;">
-                                                        Use promo code <strong
-                                                            style="color: #F5A623; font-weight: 700; letter-spacing: 0.5px;">CARE30</strong>
-                                                        online or mention it when booking your repair.
-                                                    </p>
-
-                                                    <!-- Actions: Button + Direct Call Integrated -->
+                                                <td style="padding: 11px 16px;">
                                                     <table role="presentation" border="0" cellpadding="0"
-                                                        cellspacing="0" width="100%">
+                                                        cellspacing="0" width="100%" style="table-layout: auto;">
                                                         <tr>
-                                                            <td valign="middle" class="stack-column"
-                                                                style="padding-right: 18px;">
+                                                            <td valign="middle" align="left" width="1"
+                                                                style="white-space: nowrap; padding-right: 12px;">
                                                                 <table role="presentation" border="0" cellpadding="0"
-                                                                    cellspacing="0" class="mobile-btn">
+                                                                    cellspacing="0">
                                                                     <tr>
-                                                                        <td align="center" bgcolor="#F29F05"
-                                                                            style="background-color: #F29F05; border-radius: 6px; padding: 12px 24px;">
-                                                                            <a href="https://smartapplianceservices.com/booking"
-                                                                                target="_blank"
-                                                                                style="display: inline-block; font-family: 'Afacad', Arial, sans-serif; font-size: 14.5px; line-height: 18px; font-weight: 700; color: #FFFFFF; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;">
-                                                                                Book [Appliance] Repair &rarr;
-                                                                            </a>
+                                                                        <td
+                                                                            style="background-color: #F5A623; border-radius: 4px; padding: 3px 9px;">
+                                                                            <span
+                                                                                style="display: block; color: #0D233A; font-family: 'Afacad', sans-serif; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; line-height: 14px;">
+                                                                                ★ LOCAL SPECIALIST
+                                                                            </span>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
-                                                            <td valign="middle"
-                                                                class="stack-column mobile-pad-top mobile-text-left"
-                                                                style="padding-top: 2px;">
+                                                            <td valign="middle" align="left">
                                                                 <span
-                                                                    style="font-family: 'Manrope', Arial, sans-serif; font-size: 11.5px; line-height: 15px; color: #9AB4CF; display: block;">
-                                                                    Prefer to call?
+                                                                    style="font-family: 'Manrope', sans-serif; font-size: 13.5px; font-weight: 600; color: #FFFFFF; line-height: 18px; display: block;">
+                                                                    Serving <strong style="color: #F5A623;">[City,
+                                                                        FL]</strong> &middot; <strong
+                                                                        style="color: #FFFFFF;">[Appliance_Type]
+                                                                        Certified</strong>
                                                                 </span>
-                                                                <a href="tel:7272757555"
-                                                                    style="font-family: 'Afacad', Arial, sans-serif; font-size: 19px; line-height: 23px; font-weight: 700; color: #FFFFFF; text-decoration: none; white-space: nowrap;">
-                                                                    (727) 275-7555
-                                                                </a>
+                                                            </td>
+                                                            <td valign="middle" align="right" width="1"
+                                                                style="white-space: nowrap; padding-left: 12px;">
+                                                                <table role="presentation" border="0" cellpadding="0"
+                                                                    cellspacing="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            style="background-color: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; border-radius: 20px; padding: 3px 11px;">
+                                                                            <span
+                                                                                style="font-family: 'Afacad', sans-serif; font-size: 11.5px; font-weight: 800; color: #34D399; text-transform: uppercase; letter-spacing: 0.6px; line-height: 14px; display: block;">
+                                                                                ● OEM PARTS IN-STOCK
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </table>
+                                                </td>
+                                            </tr>
+                                        </table>
 
+                                        <!-- Executive Local Specialist Dispatch Banner (Mobile: 2 Neat Rows) -->
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                            width="100%" class="mobile-only"
+                                            style="display: none; background: linear-gradient(135deg, #0D233A 0%, #163E66 100%); background-color: #0D233A; border: 1.5px solid rgba(245, 166, 35, 0.45); border-radius: 10px; margin-bottom: 18px; box-shadow: 0 4px 14px rgba(13, 35, 58, 0.15);">
+                                            <tr>
+                                                <td style="padding: 10px 14px;">
+                                                    <table role="presentation" border="0" cellpadding="0"
+                                                        cellspacing="0" width="100%" style="margin-bottom: 6px;">
+                                                        <tr>
+                                                            <td align="left" valign="middle">
+                                                                <table role="presentation" border="0" cellpadding="0"
+                                                                    cellspacing="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            style="background-color: #F5A623; border-radius: 4px; padding: 3px 8px;">
+                                                                            <span
+                                                                                style="display: block; color: #0D233A; font-family: 'Afacad', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; line-height: 13px;">
+                                                                                ★ LOCAL SPECIALIST
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td align="right" valign="middle">
+                                                                <table role="presentation" border="0" cellpadding="0"
+                                                                    cellspacing="0">
+                                                                    <tr>
+                                                                        <td
+                                                                            style="background-color: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; border-radius: 20px; padding: 2.5px 9px;">
+                                                                            <span
+                                                                                style="font-family: 'Afacad', sans-serif; font-size: 11px; font-weight: 800; color: #34D399; text-transform: uppercase; letter-spacing: 0.5px; line-height: 13px; display: block;">
+                                                                                ● OEM PARTS IN-STOCK
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <span
+                                                        style="font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 600; color: #FFFFFF; line-height: 17px; display: block;">
+                                                        Serving <strong style="color: #F5A623;">[City, FL]</strong>
+                                                        &middot; <strong style="color: #FFFFFF;">[Appliance_Type]
+                                                            Certified</strong>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <h1 class="mobile-headline"
+                                            style="margin: 0 0 10px 0; font-family: 'Afacad', sans-serif; font-size: 32px; line-height: 37px; font-weight: 700; color: #123A64; letter-spacing: -0.2px;">
+                                            Is your [Appliance_Type] giving you trouble?
+                                        </h1>
+                                        <p
+                                            style="margin: 0; font-family: 'Manrope', sans-serif; font-size: 14.5px; line-height: 23px; color: #475569;">
+                                            Hi [First_Name], whether you need a fast repair, preventative seasonal
+                                            maintenance, or a brand new replacement installation in [City], our master
+                                            technicians have you covered.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- 3 Modular Cards Featuring Approved Cloudinary Icons -->
+                    <tr>
+                        <td style="padding: 0 32px 20px 32px; background-color: #FFFFFF;" class="mobile-padding">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                                <!-- MODULE 1: REPAIR -->
+                                <tr>
+                                    <td
+                                        style="background-color: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 18px 20px;">
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                            width="100%">
+                                            <tr>
+                                                <!-- Left: Approved Cloudinary Repair Icon (No Bounding Box, Centered) -->
+                                                <td valign="middle" align="center" width="46"
+                                                    style="width: 46px; padding-right: 18px;">
+                                                    <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790166458/crushsvg-1790166425413.png"
+                                                        width="38" height="38" alt="Repair"
+                                                        style="display: block; width: 38px; height: 38px; border: 0;" />
+                                                </td>
+                                                <td valign="middle">
+                                                    <span
+                                                        style="display: inline-block; background-color: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; font-family: 'Afacad', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 5px; letter-spacing: 0.5px;">
+                                                        OPTION 1 &middot; RAPID REPAIR
+                                                    </span>
+                                                    <h3
+                                                        style="margin: 0 0 4px 0; font-family: 'Afacad', sans-serif; font-size: 19px; font-weight: 700; color: #123A64; letter-spacing: -0.2px;">
+                                                        Active Breakdown or Error Code?
+                                                    </h3>
+                                                    <p
+                                                        style="margin: 0 0 12px 0; font-family: 'Manrope', sans-serif; font-size: 13px; line-height: 19px; color: #64748B;">
+                                                        Same-day diagnostics with genuine OEM factory parts and 1-year
+                                                        warranty. Diagnostic fee waived with repair.
+                                                    </p>
+                                                    <a href="https://services-template-1w9w.vercel.app/template4-v3"
+                                                        class="mobile-btn"
+                                                        style="display: inline-block; background-color: #123A64; color: #FFFFFF; font-family: 'Afacad', sans-serif; font-size: 14px; font-weight: 700; padding: 8px 18px; border-radius: 6px; text-decoration: none;">
+                                                        Schedule Repair &rarr;
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
-                            </table>
 
-                            <!-- ==================== 5. UNIVERSAL TRUST BAR ==================== -->
-                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
-                                style="border-top: 1px solid #EDF2F7; padding-top: 16px;">
                                 <tr>
-                                    <td align="left" valign="middle" class="stack-column"
-                                        style="font-family: 'Afacad', Arial, sans-serif; font-size: 13px; line-height: 18px; font-weight: 700; color: #123A64;">
-                                        <span style="color: #F5A623; margin-right: 4px;">&#10003;</span> 1-Year Parts
-                                        &amp; Labor Warranty
-                                    </td>
-                                    <td align="center" valign="middle"
-                                        class="stack-column mobile-pad-top mobile-text-left"
-                                        style="font-family: 'Afacad', Arial, sans-serif; font-size: 13px; line-height: 18px; font-weight: 700; color: #123A64;">
-                                        <span style="color: #F5A623; margin-right: 4px;">&#10003;</span> Factory-Trained
-                                        Technicians
-                                    </td>
-                                    <td align="right" valign="middle"
-                                        class="stack-column mobile-pad-top mobile-text-left"
-                                        style="font-family: 'Afacad', Arial, sans-serif; font-size: 13px; line-height: 18px; font-weight: 700; color: #123A64;">
-                                        <span style="color: #F5A623; margin-right: 4px;">&#10003;</span> 4.9&#9733;
-                                        Verified Customer Rating
+                                    <td height="12" style="height: 12px; line-height: 12px; font-size: 12px;">&nbsp;
                                     </td>
                                 </tr>
-                            </table>
 
+                                <!-- MODULE 2: MAINTENANCE -->
+                                <tr>
+                                    <td
+                                        style="background-color: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 18px 20px;">
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                            width="100%">
+                                            <tr>
+                                                <!-- Left: Approved Cloudinary Maintenance Icon (No Bounding Box, Centered) -->
+                                                <td valign="middle" align="center" width="46"
+                                                    style="width: 46px; padding-right: 18px;">
+                                                    <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790166454/crushsvg-1790166414180.png"
+                                                        width="38" height="38" alt="Maintenance"
+                                                        style="display: block; width: 38px; height: 38px; border: 0;" />
+                                                </td>
+                                                <td valign="middle">
+                                                    <span
+                                                        style="display: inline-block; background-color: #FEF8EC; color: #B45309; border: 1px solid #FDE68A; font-family: 'Afacad', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 5px; letter-spacing: 0.5px;">
+                                                        OPTION 2 &middot; PREVENTATIVE CARE
+                                                    </span>
+                                                    <h3
+                                                        style="margin: 0 0 4px 0; font-family: 'Afacad', sans-serif; font-size: 19px; font-weight: 700; color: #123A64; letter-spacing: -0.2px;">
+                                                        Annual Multi-Point Tune-Up ($79)
+                                                    </h3>
+                                                    <p
+                                                        style="margin: 0 0 12px 0; font-family: 'Manrope', sans-serif; font-size: 13px; line-height: 19px; color: #64748B;">
+                                                        Keep your [Appliance_Type] operating quietly and efficiently.
+                                                        Clean internal components and stop future failures.
+                                                    </p>
+                                                    <a href="https://services-template-1w9w.vercel.app/template4-v3"
+                                                        class="mobile-btn"
+                                                        style="display: inline-block; background-color: #123A64; color: #FFFFFF; font-family: 'Afacad', sans-serif; font-size: 14px; font-weight: 700; padding: 8px 18px; border-radius: 6px; text-decoration: none;">
+                                                        Schedule Tune-Up &rarr;
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td height="12" style="height: 12px; line-height: 12px; font-size: 12px;">&nbsp;
+                                    </td>
+                                </tr>
+
+                                <!-- MODULE 3: REPLACEMENT / INSTALLATION -->
+                                <tr>
+                                    <td
+                                        style="background-color: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 18px 20px;">
+                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                            width="100%">
+                                            <tr>
+                                                <!-- Left: Approved Cloudinary Installation Icon (No Bounding Box, Centered) -->
+                                                <td valign="middle" align="center" width="46"
+                                                    style="width: 46px; padding-right: 18px;">
+                                                    <img src="https://res.cloudinary.com/qi6tz0xr/image/upload/v1790166450/crushsvg-1790166391508.png"
+                                                        width="38" height="38" alt="Installation"
+                                                        style="display: block; width: 38px; height: 38px; border: 0;" />
+                                                </td>
+                                                <td valign="middle">
+                                                    <span
+                                                        style="display: inline-block; background-color: #F0F9FF; color: #0369A1; border: 1px solid #BAE6FD; font-family: 'Afacad', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 5px; letter-spacing: 0.5px;">
+                                                        OPTION 3 &middot; NEW UNIT SETUP
+                                                    </span>
+                                                    <h3
+                                                        style="margin: 0 0 4px 0; font-family: 'Afacad', sans-serif; font-size: 19px; font-weight: 700; color: #123A64; letter-spacing: -0.2px;">
+                                                        New Unit Delivery & Precision Installation
+                                                    </h3>
+                                                    <p
+                                                        style="margin: 0 0 12px 0; font-family: 'Manrope', sans-serif; font-size: 13px; line-height: 19px; color: #64748B;">
+                                                        Upgrading to a new unit? We manage professional line hookup,
+                                                        leveling, water seal checks, and old unit haul-away.
+                                                    </p>
+                                                    <a href="https://services-template-1w9w.vercel.app/template4-v3"
+                                                        class="mobile-btn"
+                                                        style="display: inline-block; background-color: #123A64; color: #FFFFFF; font-family: 'Afacad', sans-serif; font-size: 14px; font-weight: 700; padding: 8px 18px; border-radius: 6px; text-decoration: none;">
+                                                        Schedule Installation &rarr;
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </table>
                         </td>
                     </tr>
 
-                    <!-- ==================== 6. COMPACT UNIVERSAL FOOTER (#123A64) ==================== -->
+                    <!-- Modular Segment Offer Block -->
+                    <tr>
+                        <td style="padding: 0 32px 24px 32px; background-color: #FFFFFF;" class="mobile-padding">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                                style="background-color: #FFFBEB; border: 2px dashed #F5A623; border-radius: 10px; padding: 16px 20px;">
+                                <tr>
+                                    <td class="mobile-stack" align="left" valign="middle">
+                                        <span
+                                            style="display: block; font-family: 'Afacad', sans-serif; font-size: 18px; font-weight: 700; color: #123A64;">
+                                            Special Segment Savings: $30 OFF Any Service
+                                        </span>
+                                        <span
+                                            style="font-family: 'Manrope', sans-serif; font-size: 12.5px; color: #78350F; display: block; margin-top: 2px;">
+                                            Apply promo code <strong>FLEX30</strong> during booking or mention it on the
+                                            phone.
+                                        </span>
+                                    </td>
+                                    <td class="mobile-stack" align="right" valign="middle" style="padding-top: 10px;">
+                                        <a href="https://services-template-1w9w.vercel.app/template4-v3"
+                                            class="mobile-btn"
+                                            style="display: inline-block; background-color: #F5A623; color: #FFFFFF; font-family: 'Afacad', sans-serif; font-size: 14px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; text-align: center; white-space: nowrap;">
+                                            Claim $30 &rarr;
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- ==================== UNIVERSAL COMPACT FOOTER (#123A64) ==================== -->
                     <tr>
                         <td bgcolor="#123A64" style="background-color: #123A64; padding: 20px 36px 18px 36px;"
                             class="mobile-padding mobile-footer-padding">
@@ -475,7 +535,7 @@
                             <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
                                     <!-- Left: White Logo & Website -->
-                                    <td valign="middle" class="mobile-footer-col mobile-footer-logo-wrap" align="left"
+                                    <td valign="middle" class="mobile-footer-col-left" align="left"
                                         style="width: 250px;">
                                         <a href="https://smartapplianceservices.com/" target="_blank"
                                             style="text-decoration: none; display: inline-block;">
@@ -492,11 +552,11 @@
                                     </td>
 
                                     <!-- Right: Contact & Hours -->
-                                    <td valign="middle" class="mobile-footer-col" align="right">
+                                    <td valign="middle" class="mobile-footer-col-right" align="right">
                                         <p class="mobile-footer-contact"
-                                            style="margin: 0 0 3px 0; font-family: 'Manrope', Arial, sans-serif; font-size: 11px; line-height: 15px; color: #C9D6E6;">
-                                            <a href="tel:7272757555" class="mobile-footer-phone"
-                                                style="color: #FFFFFF; text-decoration: none; font-weight: 700;">(727)
+                                            style="margin: 0 0 2px 0; font-family: 'Manrope', Arial, sans-serif; font-size: 11px; line-height: 15px; color: #C9D6E6;">
+                                            <a href="tel:7272757555"
+                                                style="color: #C9D6E6; text-decoration: none; font-weight: 600;">(727)
                                                 275-7555</a>
                                         </p>
                                         <p class="mobile-footer-contact"
@@ -520,12 +580,13 @@
                             <!-- Footer Bottom Row: Legal / Unsubscribe -->
                             <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
-                                    <td valign="middle" align="left" class="mobile-footer-col mobile-footer-legal"
+                                    <td valign="middle" align="left" class="stack-column mobile-footer-legal"
                                         style="font-family: 'Manrope', Arial, sans-serif; font-size: 10.5px; line-height: 15px; color: #8EA8C3;">
-                                        You are receiving this targeted service update from Smart Appliance Services.
+                                        You are receiving this because you were a customer.
                                     </td>
-                                    <td valign="middle" align="right" class="mobile-footer-col mobile-footer-legal"
-                                        style="font-family: 'Manrope', Arial, sans-serif; font-size: 10.5px; line-height: 15px; color: #8EA8C3; padding-top: 4px;">
+                                    <td valign="middle" align="right"
+                                        class="stack-column mobile-footer-legal-pad mobile-text-left mobile-footer-legal"
+                                        style="font-family: 'Manrope', Arial, sans-serif; font-size: 10.5px; line-height: 15px; color: #8EA8C3;">
                                         <a href="https://smartapplianceservices.com/unsubscribe" target="_blank"
                                             style="color: #C9D6E6; text-decoration: none; margin-right: 12px;">Unsubscribe</a>
                                         <a href="https://smartapplianceservices.com/privacy-policy" target="_blank"
@@ -538,8 +599,6 @@
                     </tr>
 
                 </table>
-                <!-- End Main Email Container -->
-
                 <!--[if (gte mso 9)|(IE)]>
         </td>
         </tr>
