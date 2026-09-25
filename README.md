@@ -130,12 +130,15 @@ Tested and optimized for 99%+ rendering accuracy across standard desktop, web, a
 
 ---
 
-## 📂 Repository Layout
+## 📂 Repository Layout & Complete Template Suite
 
 ```
 smart-appliances-templates/
-├── index.html    # Main responsive HTML email template
-└── README.md     # Project documentation & integration guide
+├── index.html                       # Base V3 Lifecycle Template (Quick Check-In)
+├── template-2-maintenance.html      # Annual Appliance Tune-Up & Seasonal Offer
+├── template-3-review-request.html   # Post-Service Review & Rating Request
+├── template-4-warranty.html         # 1-Year Warranty & Protection Reminder
+└── README.md                        # Master project documentation
 ```
 
 ---
