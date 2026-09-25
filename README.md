@@ -91,6 +91,7 @@ The template contains standardized dynamic tag placeholders ready for automatic 
 | :--- | :--- | :--- |
 | `[first_name]` | Customer's first name | `Sarah` |
 | `[appliance]` | Serviced appliance unit | `Refrigerator` / `Washing Machine` |
+| `[City]` / `[city]` | Customer's local city / service area | `Tampa` / `St. Petersburg` |
 | `[City/Month]` | Location and service month | `St. Petersburg in August` |
 
 ---
@@ -134,10 +135,10 @@ Tested and optimized for 99%+ rendering accuracy across standard desktop, web, a
 
 ```
 smart-appliances-templates/
-├── index.html                       # Base V3 Lifecycle Template (Quick Check-In)
-├── template-2-maintenance.html      # Annual Appliance Tune-Up & Seasonal Offer
-├── template-3-review-request.html   # Post-Service Review & Rating Request
-├── template-4-warranty.html         # 1-Year Warranty & Protection Reminder
+├── index.html                       # Base Template 1: Quick Customer Check-In
+├── template-2-maintenance.html      # Template 2: Seasonal Savings & Appliance Repair Offer ($89)
+├── template-3-review-request.html   # Template 3: Same-Day Service Dispatch & Openings Alert ($25 OFF)
+├── template-4-warranty.html         # Template 4: Targeted Appliance Specialist & Symptom Care ($30 OFF)
 └── README.md                        # Master project documentation
 ```
 
