@@ -118,17 +118,19 @@ In `index.html`, the customer review quote and reviewer name can be edited direc
 
 ---
 
-### 7. Swapping Placeholder Images with Real Business Photos
-All graphics are hosted on Cloudinary for reliable delivery:
-- **Header Dark Logo**: `https://res.cloudinary.com/qi6tz0xr/image/upload/v1790145483/23634436.png`
-- **Footer Light Logo**: `https://res.cloudinary.com/qi6tz0xr/image/upload/v1790145490/9823597823.png`
-- **5-Star Rating Badge**: `https://res.cloudinary.com/qi6tz0xr/image/upload/v1790145536/Stars.png`
+### 7. Local Image Assets & CDN Uploads
+All graphic assets (logos, rating stars, action icons, badge graphics) are stored directly as local image files in the `images/` directory of the repository/ZIP package, ensuring zero external Cloudinary dependencies:
 
-*When ready to replace placeholder graphics with real business photos (e.g. technicians working, vans, kitchen scenes)*:
-Upload your photo to your CDN/ESP image manager and replace the `src="..."` link in the `<img>` tag:
-```html
-<img src="https://your-domain.com/your-technician-photo.jpg" width="140" height="auto" alt="Technician Service" style="display: block; width: 100%; height: auto; border: 0;" />
-```
+- **Dark Logo**: `images/logo-dark.png`
+- **Light Logo**: `images/logo-light.png`
+- **5-Star Rating Badge**: `images/stars.png`
+- **Arrow Icon**: `images/arrow-right.png`
+- **Phone Icon**: `images/icon-phone.png`
+- **Service Icons**: `images/icon-repair.png`, `images/icon-maintenance.png`, `images/icon-installation.png`
+
+*When uploading templates to your Email Service Provider (Mailchimp, Klaviyo, HubSpot, SendGrid)*:
+1. You can upload the template ZIP directly; ESPs will automatically ingest and host all images from the `images/` folder.
+2. Alternatively, upload the `images/` directory to your company's own CDN/domain and update the relative `src="images/..."` paths to `src="https://your-domain.com/images/..."`.
 
 ---
 

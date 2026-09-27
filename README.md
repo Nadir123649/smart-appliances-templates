@@ -41,7 +41,7 @@ The template is organized into 4 distinct, modular sections for optimal readabil
 ```
 ┌───────────────────────────────────────────────────────────┐
 │  1. MINIMAL HEADER                                        │
-│     - Brand Logo (Cloudinary hosted)                      │
+│     - Brand Logo (Local images/ asset)                    │
 ├───────────────────────────────────────────────────────────┤
 │  2. PERSONAL CHECK-IN LETTER                              │
 │     - Yellow Accent Line & Personalized Heading           │
